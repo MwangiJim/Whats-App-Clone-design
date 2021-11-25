@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text"placeholder="Text here" id="OutputScreen"> -->
+    <button class="Btn">CLICK!!!!</button>
+    <button class="Btn">CLICK!!!!</button>
+    <button class="Btn">CLICK!!!!</button>
+    <button class="Btn">CLICK!!!!</button>
+    <button class="Btn">CLICK!!!!</button>
+    <br><br>
+    <input type="text"placeholder="here..." id="Screen">
+
+    <script>
+      var Buttons = document.querySelectorAll('.Btn');
+      var Screen = document.getElementById('Screen');
+
+      for(let i=0;i<Buttons.length;i++){
+        Buttons[i].setAttribute("onclick","buttonSelected(this)");
+      }
+
+      function buttonSelected(a){
+        let buttonclicked = a.innerHTML;
+        console.log(buttonclicked);
+        Screen.value = buttonclicked;
+      }
+    </script>
+</body>
+</html>
